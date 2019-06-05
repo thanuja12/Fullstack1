@@ -1,0 +1,32 @@
+<html>
+    <head>
+    </head>
+    <body><form>
+        <h1>User Registration</h1><br>
+    NAME:<input type="text" id="username"><br>
+    PASSWORD:<input type="password" id="password"><br>
+    EMAIL ID:<input type="text" id="emailid"><br>
+     MESSAGE :<input type="text" id="message"><br>
+        <input type="submit"  onclick="result()" value="submit"></form>
+
+<script type="text/javascript"> 
+ function result()
+ {
+event.preventDefault();   
+var uname=document.getElementById("username").value;
+var pwd=document.getElementById("password").value;
+var email=document.getElementById("emailid").value;
+var msg=document.getElementById("message").value;
+//console.getElementById(uname);
+console.log(uname);
+var value={'a': uname,'b': pwd,'c': email,'d': msg}
+localStorage.setItem('value', JSON.stringify(value));
+
+ }
+
+
+
+</script>
+       
+    </body>
+</html>

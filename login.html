@@ -1,0 +1,30 @@
+<html>
+    <head></head>
+    <body>
+        <form>
+        <h1>Userlogin</h1>
+        EMAIL ID:<input type="text" id="emailid"><br>
+        PASSWORD :<input type="password" id="password"><br>
+        <input type="button"  onclick="result()" value="login">
+    </form>
+
+        <script type="text/javascript"> 
+function result()
+{
+    event.preventDefault();   
+var storedEmail=document.getElementById('emailid').value;
+var storedPwd=document.getElementById('password').value;
+var test = JSON.parse(localStorage.getItem('value'));
+
+if(storedEmail == test.c && storedPwd == test.b)
+ {
+    alert('sucess');
+} 
+else {
+    alert('error ');
+}
+}
+
+    </script>
+    </body>
+</html>
